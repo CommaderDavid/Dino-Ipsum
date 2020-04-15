@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>Dino Guess</title>
   </head>
   <body>
-
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Dino Hangman</h1>
+      </div>
+      <h3>Can you name them?</h3>
+      <br>
+      <div class="name"></div>
+      <br>
+      <form class="form-control">
+        <h3>Which vowel is missing?</h3>
+        <select id="vowels">
+          <option value="a">A</option>
+          <option value="e">E</option>
+          <option value="i">I</option>
+          <option value="o">O</option>
+          <option value="u">U</option>
+        </select>
+        <br>
+        <button type="button" class="btn btn-success" id="guess">Final Answer</button>
+      </form>
+      <span id="correct"></span>
+      <span id="wrong"></span>
+    </div>
   </body>
 </html>
