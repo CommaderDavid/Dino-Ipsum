@@ -1,15 +1,20 @@
 export class EraseVowels {
   constructor(dino) {
-    let vowels = [a, e, i, o, u];
     this.dino = dino;
   }
-  replacementLetter() {
-    let removeA = this.dino.replace(/a/g, "-");
-    let removeE = this.dino.replace(/e/g, "-");
-    let removeI = this.dino.replace(/i/g, "-");
-    let removeO = this.dino.replace(/o/g, "-");
-    let removeU = this.dino.replace(/u/g, "-");
+
+  randomVowels() {
+    let vowelNumber = Math.floor(Math.random() * 5);
+    if (vowelNumber === 0) {
+      return this.dino.replace(/a/gi, "-");
+    } else if (vowelNumber === 1) {
+      return this.dino.replace(/e/gi, "-");
+    } else if (vowelNumber === 2) {
+      return this.dino.replace(/i/gi, "-");
+    } else if (vowelNumber === 3) {
+      return this.dino.replace(/o/gi, "-");
+    } else if (vowelNumber === 4) {
+      return this.dino.replace(/u/gi, "-");
+    }
   }
-  // Start here and remember to grab the .replace and,
-  //look at a random number generator for getting a number bewteen 0-4.
 }

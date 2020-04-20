@@ -2,8 +2,10 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
+import { EraseVowels } from './erase-vowels.js';
 
 $(document).ready(function () {
+  var dinoName;
 
   $("button#get-name").click(function () {
 
@@ -14,7 +16,8 @@ $(document).ready(function () {
     })();
 
     const getElements = function (response) {
-      $('.name').text(`${response}`);
+      let dinoName = new EraseVowels(response[0][0]);
+      $('.name').text(`${dinoName.randomVowels()}`);
     };
   });
 
