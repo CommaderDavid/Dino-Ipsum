@@ -16,7 +16,7 @@ $(document).ready(function () {
     })();
 
     const getElements = function (response) {
-      let dinoName = new EraseVowels(response[0][0]);
+      dinoName = new EraseVowels(response[0][0]);
       $('.name').text(`${dinoName.randomVowels()}`);
     };
   });
@@ -26,5 +26,8 @@ $(document).ready(function () {
     e.preventDefault();
 
     const vowel = $("select#vowels").val();
+
+    $("#correct-spelling").text(dinoName.dino);
+    $("#answer").text(dinoName.correctAnswer(vowel));
   });
 });
